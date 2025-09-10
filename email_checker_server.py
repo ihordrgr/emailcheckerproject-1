@@ -1223,8 +1223,8 @@ if __name__ == '__main__':
     init_db()
     
     # Load environment variables
-    port = int(os.environ.get('PORT', 5000))
-    host = os.environ.get('HOST', '0.0.0.0')
+    port = int(os.environ.get('PORT', 3001))
+    host = os.environ.get('HOST', 'localhost')
     debug = os.environ.get('DEBUG', 'False').lower() == 'true'
     
     logger.info(f"Starting Email Checker Server on {host}:{port}")

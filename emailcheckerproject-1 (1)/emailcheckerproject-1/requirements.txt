@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-cryptography
-dnspython
-flask
-flask-cors
-pysocks
-requests

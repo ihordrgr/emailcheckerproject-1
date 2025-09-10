@@ -1,6 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { Play, Square, Download, Upload, Trash2, Settings, Database } from 'lucide-react';
 
+// Backend API configuration
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3001' 
+  : `https://${window.location.hostname.replace('-5000', '-3001')}`;
+
 const EmailChecker = () => {
   const [currentPage, setCurrentPage] = useState('main');
   const [isRunning, setIsRunning] = useState(false);
@@ -127,7 +132,7 @@ const EmailChecker = () => {
     try {
       // Real protocol check would require server-side implementation
       // This is where actual POP3/IMAP/SMTP connections would be made
-      const result = await fetch('/api/check-email', {
+      const result = await fetch(`${API_BASE_URL}/api/check-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
