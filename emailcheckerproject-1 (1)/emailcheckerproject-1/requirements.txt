@@ -6,9 +6,3 @@ flask
 flask-cors
 pysocks
 requests
-cryptography
-dnspython
-flask
-flask-cors
-pysocks
-requests
