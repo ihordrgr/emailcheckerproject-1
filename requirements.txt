@@ -6,13 +6,4 @@ flask
 flask-cors
 pysocks
 requests
-cryptography
-dnspython
-fastapi
-flask
-flask-cors
-pysocks
-python-dotenv
-requests
-uvicorn
 python-dotenv
