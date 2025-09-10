@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: emailchecker
+    env: docker
+    plan: free
+    branch: main
+    repo: https://github.com/ihordrgr/emailcheckerproject-1
+    buildCommand: docker build -t emailchecker .
+    startCommand: docker run -p 5000:5000 emailchecker
+    autoDeploy: true
